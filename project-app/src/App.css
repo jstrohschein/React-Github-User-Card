@@ -35,3 +35,13 @@ button {
   display: flex !important;
 }
 
+.get-button{
+  margin: 0 auto !important;
+  display: flex !important;
+  text-align: center !important;
+}
+
+.follower-card {
+  margin-top: 1rem !important;
+}
+

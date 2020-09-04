@@ -3,7 +3,7 @@ import axios from 'axios';
 import UserCard from './components/UserCard'
 import './App.css';
 import { InputGroup, Input, Button, InputGroupAddon } from 'reactstrap'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, Link } from 'react-router-dom'
 import FollowerCards from './components/FollowerCards';
 
 
@@ -88,9 +88,16 @@ class App extends React.Component {
         placeholder='GitHub Username'
         value={this.state.userText}
         onChange={this.handleUserChange} />
-        <InputGroupAddon addonType="append"><Button onClick={this.handleNewUser}>Find</Button></InputGroupAddon>
+        <InputGroupAddon addonType="append"><Button onClick={this.handleNewUser} tag={Link} to={'/'}>Find</Button></InputGroupAddon>
       </InputGroup>
-      <UserCard user={this.state} />
+      <Switch>
+      <Route exact path='/' render={props => {
+        return <UserCard user={this.state} />
+      }} />
+      <Route path='/:username/followers' render={props => {
+        return <FollowerCards user={this.state} />
+      }} /> 
+      </Switch>
     </div>
   );
   }

@@ -1,0 +1,37 @@
+.App {
+  text-align: center;
+}
+
+.card{
+  max-width: 350px;
+  max-height: auto;
+  margin: 0 auto;
+}
+
+.searchBar {
+  max-width: 25%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  text-align: center;
+  margin: 0 auto;
+  font-family: 'Anton', sans-serif;
+}
+
+.name {
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 1rem !important;
+  text-align: center;
+}
+
+
+button {
+  margin: 0 auto !important;
+}
+
+.btn {
+  display: flex !important;
+}
+
